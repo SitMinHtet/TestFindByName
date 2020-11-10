@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Cities</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Population</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="city : ${cities}">
+        <td th:text="${city.id}"></td>
+        <td th:text="${city.name}"></td>
+        <td th:text="${city.population}"></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<a  href="#" th:href="@{/search}" type="butto">Search City By Name</a>
+
+</body>
+</html>
